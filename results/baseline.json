@@ -1,0 +1,1453 @@
+{
+  "name": "baseline",
+  "fingerprint": {
+    "corpus_hash": "04a419650af5890c",
+    "dataset_hash": "f7ee510b08f61864",
+    "config_hash": "4e7b2da162013ea0",
+    "evaluator_version": "0.1.0",
+    "generator": "simulated-extractive",
+    "chunks": 15,
+    "questions": 40
+  },
+  "config": {
+    "name": "baseline",
+    "chunkSize": 60,
+    "topK": 3,
+    "embedding": "bow",
+    "accessFilter": true,
+    "excludeSuperseded": true,
+    "minAnswerOverlap": 0.5,
+    "hallucinationRate": 0,
+    "repetitions": 1,
+    "seed": 42
+  },
+  "summary": {
+    "retrieval": 1,
+    "access": 1,
+    "freshness": 1,
+    "generation": 1,
+    "citations": 1,
+    "no_evidence": 0.95,
+    "answer": 1,
+    "all_layers": 0.95
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "role": "customer",
+      "question": "How many days do I have to request a refund?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.621)",
+          "data-retention-v2#0 (0.320)",
+          "api-limits#0 (0.238)"
+        ],
+        "answer": "Customers may request a full refund within 30 days of purchase. [refund-policy-v2#0] Refunds are issued to the original payment method within 5 business days. [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q02",
+      "role": "customer",
+      "question": "How long until a refund reaches my original payment method?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.428)"
+        ],
+        "answer": "Refunds are issued to the original payment method within 5 business days. [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q03",
+      "role": "customer",
+      "question": "What happens if I cancel an annual plan after the refund window?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.390)",
+          "sla#1 (0.144)",
+          "pricing#0 (0.135)"
+        ],
+        "answer": "Annual plans cancelled after the refund window receive a prorated credit for unused months. [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q04",
+      "role": "customer",
+      "question": "Are refunds available for extra AI credits?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.481)",
+          "refund-policy-v2#1 (0.447)",
+          "sla#0 (0.146)"
+        ],
+        "answer": "Refunds are not available for add-on usage charges such as extra AI [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q05",
+      "role": "customer",
+      "question": "Where are refund requests submitted?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.552)",
+          "api-limits#0 (0.238)",
+          "data-retention-v2#0 (0.080)"
+        ],
+        "answer": "Refund requests are submitted from the Billing page in account settings. [refund-policy-v2#0] Customers may request a full refund within 30 days of purchase. [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q06",
+      "role": "customer",
+      "question": "How long are deleted workspaces kept before permanent deletion?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "data-retention-v2#0 (0.434)",
+          "cancellation#0 (0.098)",
+          "account-security#0 (0.069)"
+        ],
+        "answer": "Deleted workspaces are kept for 30 days before permanent deletion. [data-retention-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q07",
+      "role": "customer",
+      "question": "How long are encrypted backups retained?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "data-retention-v2#0 (0.240)"
+        ],
+        "answer": "Encrypted backups are retained for 90 days. [data-retention-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q08",
+      "role": "customer",
+      "question": "Can Enterprise customers request a custom retention period?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "data-retention-v2#0 (0.396)",
+          "support-hours#0 (0.226)",
+          "api-limits#0 (0.224)"
+        ],
+        "answer": "Customers on the Enterprise plan can request a custom retention period of up to 7 years. [data-retention-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q09",
+      "role": "customer",
+      "question": "How long are export files available for download?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "data-retention-v2#0 (0.277)",
+          "account-security#0 (0.077)",
+          "refund-policy-v2#0 (0.060)"
+        ],
+        "answer": "Export files are available for download for 7 days. [data-retention-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q10",
+      "role": "customer",
+      "question": "Can a workspace owner restore a deleted workspace?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "data-retention-v2#0 (0.472)",
+          "account-security#0 (0.175)",
+          "cancellation#0 (0.165)"
+        ],
+        "answer": "During this period a workspace owner can restore the workspace from the Trash page. [data-retention-v2#0] Deleted workspaces are kept for 30 days before permanent deletion. [data-retention-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q11",
+      "role": "customer",
+      "question": "What monthly uptime does Nimbus guarantee?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "sla#0 (0.436)",
+          "sla#1 (0.354)",
+          "support-hours#0 (0.069)"
+        ],
+        "answer": "Nimbus guarantees 99.9% monthly uptime for Pro and Enterprise plans. [sla#0] If uptime falls below 99.9%, customers receive a service credit of 10% of the monthly fee. [sla#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q12",
+      "role": "customer",
+      "question": "What service credit do customers receive if uptime falls below 99.0%?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "sla#0 (0.691)",
+          "refund-policy-v2#1 (0.333)",
+          "support-hours#0 (0.185)"
+        ],
+        "answer": "If uptime falls below 99.9%, customers receive a service credit of 10% of the monthly fee. [sla#0] If uptime falls below 99.0%, the service credit increases to 25% of the monthly fee. [sla#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q13",
+      "role": "customer",
+      "question": "How long do I have to claim service credits after an incident?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#1 (0.500)",
+          "sla#0 (0.382)",
+          "support-hours#0 (0.069)"
+        ],
+        "answer": "Service credits must be claimed within 30 days of the incident. [sla#0] If uptime falls below 99.9%, customers receive a service credit of 10% of the monthly fee. [sla#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q14",
+      "role": "customer",
+      "question": "Does scheduled maintenance count as downtime?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "sla#1 (0.354)",
+          "sla#0 (0.109)"
+        ],
+        "answer": "and does not count as downtime. [sla#1] Scheduled maintenance is announced 72 hours in advance [sla#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q15",
+      "role": "customer",
+      "question": "How much does the Pro plan cost per user?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "pricing#0 (0.552)",
+          "api-limits#0 (0.206)",
+          "sla#1 (0.177)"
+        ],
+        "answer": "The Pro plan costs $15 per user per month and includes 100 GB of storage per user. [pricing#0] The Starter plan costs $8 per user per month and includes 5 GB of storage per user. [pricing#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q16",
+      "role": "customer",
+      "question": "How much storage does the Starter plan include?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "pricing#0 (0.552)",
+          "sla#1 (0.354)",
+          "api-limits#0 (0.206)"
+        ],
+        "answer": "The Starter plan costs $8 per user per month and includes 5 GB of storage per user. [pricing#0] The Pro plan costs $15 per user per month and includes 100 GB of storage per user. [pricing#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q17",
+      "role": "customer",
+      "question": "How much does paying annually save compared with monthly billing?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "pricing#0 (0.271)",
+          "cancellation#0 (0.178)",
+          "sla#0 (0.134)"
+        ],
+        "answer": "Paying annually saves two months compared with monthly billing. [pricing#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q18",
+      "role": "customer",
+      "question": "What support do Enterprise customers get?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "support-hours#0 (0.560)",
+          "data-retention-v2#0 (0.160)",
+          "cancellation#0 (0.126)"
+        ],
+        "answer": "Enterprise customers get 24/7 phone and chat support. [support-hours#0] Pro customers get chat support Monday to Friday from 08:00 to 20:00 UTC. [support-hours#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q19",
+      "role": "customer",
+      "question": "When is chat support available for Pro customers?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "support-hours#0 (0.558)",
+          "data-retention-v2#0 (0.124)",
+          "refund-policy-v2#0 (0.107)"
+        ],
+        "answer": "Pro customers get chat support Monday to Friday from 08:00 to 20:00 UTC. [support-hours#0] Enterprise customers get 24/7 phone and chat support. [support-hours#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q20",
+      "role": "customer",
+      "question": "When do password reset links expire?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "account-security#0 (0.309)"
+        ],
+        "answer": "Password reset links expire after 1 hour. [account-security#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q21",
+      "role": "customer",
+      "question": "What happens after 5 failed login attempts?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "account-security#0 (0.276)",
+          "refund-policy-v2#0 (0.053)",
+          "pricing#0 (0.049)"
+        ],
+        "answer": "After 5 failed login attempts the account is locked for 15 minutes. [account-security#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q22",
+      "role": "customer",
+      "question": "Is single sign-on with SAML available?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "account-security#0 (0.309)",
+          "data-retention-v2#0 (0.069)",
+          "refund-policy-v2#0 (0.060)"
+        ],
+        "answer": "Single sign-on with SAML is available on the Enterprise plan. [account-security#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q23",
+      "role": "customer",
+      "question": "How many API requests per minute are allowed on the Pro plan?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "api-limits#0 (0.617)",
+          "pricing#0 (0.180)",
+          "refund-policy-v2#0 (0.146)"
+        ],
+        "answer": "The public API allows 100 requests per minute on the Starter plan and 1,000 requests per minute on the Pro plan. [api-limits#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q24",
+      "role": "customer",
+      "question": "What HTTP status do requests over the rate limit receive?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "api-limits#0 (0.519)",
+          "refund-policy-v2#0 (0.136)",
+          "support-hours#0 (0.105)"
+        ],
+        "answer": "Requests over the rate limit receive HTTP status 429 with a Retry-After header. [api-limits#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q25",
+      "role": "customer",
+      "question": "Can I cancel a subscription at any time?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "cancellation#0 (0.378)"
+        ],
+        "answer": "Customers can cancel a subscription at any time from the Billing page. [cancellation#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q26",
+      "role": "customer",
+      "question": "What happens to the workspace after cancellation?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "cancellation#0 (0.252)",
+          "data-retention-v2#0 (0.240)",
+          "account-security#0 (0.089)"
+        ],
+        "answer": "After cancellation the workspace becomes read-only for 30 days. [cancellation#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q27",
+      "role": "customer",
+      "question": "Do you offer a student discount?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [],
+        "answer": "I don't have enough information to answer that.",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q28",
+      "role": "customer",
+      "question": "What discount can support agents approve on the next invoice?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "support-hours#0 (0.170)"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q29",
+      "role": "customer",
+      "question": "Is there a mobile app for Android?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "account-security#0 (0.089)"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q30",
+      "role": "customer",
+      "question": "Where is Nimbus headquartered?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 0,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "support-hours#0 (0.098)",
+          "sla#0 (0.077)"
+        ],
+        "answer": "Service status is published at status.nimbus.example. [support-hours#0] Nimbus guarantees 99.9% monthly uptime for Pro and Enterprise plans. [sla#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": false,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q31",
+      "role": "customer",
+      "question": "Can I pay with cryptocurrency?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [],
+        "answer": "I don't have enough information to answer that.",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q32",
+      "role": "customer",
+      "question": "Who owns customer communication during a severity 1 incident?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "support-hours#0 (0.157)",
+          "data-retention-v2#0 (0.105)",
+          "cancellation#0 (0.082)"
+        ],
+        "answer": "I don't have enough information to answer that.",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q33",
+      "role": "agent",
+      "question": "What is the maximum one-time discount agents may approve?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "discount-authority#0 (0.535)",
+          "refund-exceptions#0 (0.197)",
+          "cancellation#0 (0.082)"
+        ],
+        "answer": "Support agents may approve a one-time discount of up to 20% on the next invoice. [discount-authority#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q34",
+      "role": "agent",
+      "question": "Who must approve discounts above 20%?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "discount-authority#0 (0.569)",
+          "refund-exceptions#0 (0.156)",
+          "support-hours#0 (0.062)"
+        ],
+        "answer": "Support agents may approve a one-time discount of up to 20% on the next invoice. [discount-authority#0] Discounts above 20% require approval from a support manager. [discount-authority#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q35",
+      "role": "agent",
+      "question": "How quickly must agents page the on-call engineer for a severity 1 incident?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "incident-escalation#0 (0.642)",
+          "refund-exceptions#0 (0.174)",
+          "discount-authority#0 (0.141)"
+        ],
+        "answer": "Agents must page the on-call engineer within 15 minutes of detecting a severity 1 incident. [incident-escalation#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q36",
+      "role": "agent",
+      "question": "What is a severity 1 incident?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "incident-escalation#0 (0.784)",
+          "account-security#0 (0.089)",
+          "api-limits#0 (0.079)"
+        ],
+        "answer": "A severity 1 incident is a full outage or a confirmed data breach. [incident-escalation#0] Agents must page the on-call engineer within 15 minutes of detecting a severity 1 incident. [incident-escalation#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q37",
+      "role": "agent",
+      "question": "Who approves exception refunds above $500?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-exceptions#0 (0.389)",
+          "refund-policy-v2#0 (0.267)",
+          "discount-authority#0 (0.126)"
+        ],
+        "answer": "Exception refunds above $500 require finance approval. [refund-exceptions#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q38",
+      "role": "agent",
+      "question": "How should agents handle chargebacks?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-exceptions#0 (0.261)",
+          "discount-authority#0 (0.141)",
+          "incident-escalation#0 (0.057)"
+        ],
+        "answer": "Chargebacks must be forwarded to the finance team and are never refunded directly by agents. [refund-exceptions#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q39",
+      "role": "agent",
+      "question": "How many days does a customer have to request a refund?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 1,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "refund-policy-v2#0 (0.598)",
+          "data-retention-v2#0 (0.347)",
+          "support-hours#0 (0.277)"
+        ],
+        "answer": "Customers may request a full refund within 30 days of purchase. [refund-policy-v2#0] Refunds are issued to the original payment method within 5 business days. [refund-policy-v2#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": true,
+          "answer": true
+        }
+      }
+    },
+    {
+      "id": "q40",
+      "role": "agent",
+      "question": "What is the phone number of the on-call engineer?",
+      "pass_rate": {
+        "retrieval": 1,
+        "access": 1,
+        "freshness": 1,
+        "generation": 1,
+        "citations": 1,
+        "no_evidence": 0,
+        "answer": 1
+      },
+      "sample": {
+        "retrieved": [
+          "incident-escalation#0 (0.113)",
+          "support-hours#0 (0.069)"
+        ],
+        "answer": "Agents must page the on-call engineer within 15 minutes of detecting a severity 1 incident. [incident-escalation#0]",
+        "scores": {
+          "context_recall": 1,
+          "fact_recall": 1,
+          "faithfulness": 1
+        },
+        "layers": {
+          "retrieval": true,
+          "access": true,
+          "freshness": true,
+          "generation": true,
+          "citations": true,
+          "no_evidence": false,
+          "answer": true
+        }
+      }
+    }
+  ]
+}
