@@ -1,0 +1,12 @@
+{
+  "name": "candidate-unsafe",
+  "chunkSize": 60,
+  "topK": 3,
+  "embedding": "bow",
+  "accessFilter": false,
+  "excludeSuperseded": false,
+  "minAnswerOverlap": 0.5,
+  "hallucinationRate": 0.1,
+  "repetitions": 3,
+  "seed": 42
+}

@@ -1,0 +1,12 @@
+{
+  "name": "baseline",
+  "chunkSize": 60,
+  "topK": 3,
+  "embedding": "bow",
+  "accessFilter": true,
+  "excludeSuperseded": true,
+  "minAnswerOverlap": 0.5,
+  "hallucinationRate": 0,
+  "repetitions": 1,
+  "seed": 42
+}

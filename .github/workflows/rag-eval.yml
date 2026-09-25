@@ -1,0 +1,30 @@
+name: rag-eval
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      # Evaluate the PR's pipeline (corpus + config + code) under a new name so the committed baseline stays the reference.
+      - run: npm run eval -- --config configs/baseline.json --name pr
+      # Exits 1 on regressions in critical layers (access, freshness).
+      - run: npm run compare -- baseline pr
+      - if: always()
+        run: cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rag-eval-report
+          path: |
+            report.md
+            results/pr.json

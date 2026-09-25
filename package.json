@@ -1,0 +1,26 @@
+{
+  "name": "rag-regression-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Find out why a RAG answer got worse: retrieval vs generation vs freshness vs access.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "eval": "tsx src/eval.ts",
+    "compare": "tsx src/compare.ts",
+    "demo": "tsx src/eval.ts --config configs/baseline.json && tsx src/eval.ts --config configs/candidate.json && tsx src/compare.ts baseline candidate",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

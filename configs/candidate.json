@@ -1,0 +1,12 @@
+{
+  "name": "candidate",
+  "chunkSize": 12,
+  "topK": 3,
+  "embedding": "char-trigram",
+  "accessFilter": true,
+  "excludeSuperseded": true,
+  "minAnswerOverlap": 0.5,
+  "hallucinationRate": 0,
+  "repetitions": 1,
+  "seed": 42
+}
